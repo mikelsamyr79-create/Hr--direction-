@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><body>
+<script>
+const params = new URLSearchParams(location.search);
+location.href = params.get('to') || '/';
+</script>
+</body></html>
