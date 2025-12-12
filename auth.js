@@ -1,1 +1,0 @@
-function login(){alert('ربط Firebase هنا')}
