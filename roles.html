@@ -1,16 +1,54 @@
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الصلاحيات</title>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>صلاحيات المستخدمين</title>
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="assets/js/auth_protect.js"></script>
 </head>
 <body>
-<header class="top-nav">إدارة الصلاحيات</header>
-<div class="container">
-<div class="card">عرض المستخدمين</div>
-<div class="card">تعديل الصلاحيات</div>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">Team Manager — النظام</div>
+    <div class="menu">
+      <a href="index.html">🏠 الرئيسية</a>
+      <a href="dashboard.html">📊 الداشبورد</a>
+      <a href="roles.html" class="active">🔐 صلاحيات</a>
+      <a href="users.html">👥 المستخدمين</a>
+    </div>
+  </aside>
+  <main class="main">
+    <div class="topbar">
+      <div><input placeholder="ابحث بالمستخدم..." class="search" id="searchUser"></div>
+      <div><button class="btn" id="addUserBtn">+ أضف مستخدم</button></div>
+    </div>
+
+    <div class="panel">
+      <div class="card-title">قائمة المستخدمين</div>
+      <table class="table" id="usersTable">
+        <thead><tr><th>الاسم</th><th>البريد</th><th>الدور</th><th>تعديل</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="panel" style="margin-top:16px;">
+      <div class="card-title">تعديل / إضافة مستخدم</div>
+      <div style="max-width:520px">
+        <input id="u_name" class="input" placeholder="الاسم">
+        <input id="u_email" class="input" placeholder="البريد">
+        <select id="u_role" class="input">
+          <option value="employee">employee</option>
+          <option value="sales">sales</option>
+          <option value="manager">manager</option>
+          <option value="hr">hr</option>
+          <option value="finance">finance</option>
+          <option value="admin">admin</option>
+        </select>
+        <button class="btn" id="saveUserBtn">حفظ المستخدم</button>
+      </div>
+    </div>
+
+  </main>
 </div>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
