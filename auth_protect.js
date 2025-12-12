@@ -1,1 +1,0 @@
-console.log('حماية ستكون عبر Firebase');
