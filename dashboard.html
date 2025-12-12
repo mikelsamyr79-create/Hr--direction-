@@ -1,48 +1,42 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>التقارير — Dashboard</title>
+<head>
+<meta charset="UTF-8">
+<title>التقارير</title>
 <link rel="stylesheet" href="assets/css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="assets/js/auth.js"></script>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">Team Manager — النظام</div>
-    <div class="menu">
-      <a href="index.html">🏠 الرئيسية</a>
-      <a href="dashboard.html" class="active">📊 الداشبورد</a>
-      <a href="roles.html">🔐 صلاحيات</a>
-      <a href="users.html">👥 المستخدمين</a>
-      <a href="login.html">🔓 تسجيل خروج</a>
-    </div>
-  </aside>
-  <main class="main">
-    <div class="topbar">
-      <div><input placeholder="ابحث..." class="search"></div>
-      <div><span class="small">مرحبا،</span> <strong id="userName2">مستخدم</strong></div>
-    </div>
-
-    <div class="grid">
-      <div class="panel">
-        <div class="card-title">تقرير المبيعات الشهرية</div>
-        <canvas id="chart1" width="400" height="180"></canvas>
-      </div>
-      <div class="panel">
-        <div class="card-title">تقرير الحضور</div>
-        <table class="table">
-          <thead><tr><th>الفرع</th><th>الموظفين</th><th>الحضور</th></tr></thead>
-          <tbody><tr><td>القاهرة</td><td>24</td><td>92%</td></tr></tbody>
-        </table>
-      </div>
-      <div class="panel">
-        <div class="card-title">ملخص</div>
-        <p class="small">نظرة سريعة على مؤشرات الأداء الرئيسية.</p>
-      </div>
-    </div>
-  </main>
+<div class="sidebar">
+  <h3>النظام الإداري</h3>
+  <a href="index.html">الرئيسية</a>
+  <a href="roles.html">الصلاحيات</a>
+  <a href="users.html">المستخدمين</a>
+  <a href="dashboard.html" class="active">التقارير</a>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="assets/js/app.js"></script>
+
+<div class="content">
+  <h1>التقارير الشهرية</h1>
+
+  <div class="panel">
+    <h2>مخطط المبيعات</h2>
+    <canvas id="salesChart"></canvas>
+  </div>
+
+</div>
+
+<script>
+var ctx = document.getElementById('salesChart');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['يناير','فبراير','مارس','أبريل','مايو'],
+        datasets: [{label: 'المبيعات', data:[1200,1400,900,1600,1800]}]
+    }
+});
+</script>
+
 </body>
 </html>

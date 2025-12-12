@@ -1,54 +1,34 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>صلاحيات المستخدمين</title>
+<head>
+<meta charset="UTF-8">
+<title>إدارة الصلاحيات</title>
 <link rel="stylesheet" href="assets/css/style.css">
+<script defer src="assets/js/auth.js"></script>
 </head>
 <body>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand">Team Manager — النظام</div>
-    <div class="menu">
-      <a href="index.html">🏠 الرئيسية</a>
-      <a href="dashboard.html">📊 الداشبورد</a>
-      <a href="roles.html" class="active">🔐 صلاحيات</a>
-      <a href="users.html">👥 المستخدمين</a>
-    </div>
-  </aside>
-  <main class="main">
-    <div class="topbar">
-      <div><input placeholder="ابحث بالمستخدم..." class="search" id="searchUser"></div>
-      <div><button class="btn" id="addUserBtn">+ أضف مستخدم</button></div>
-    </div>
-
-    <div class="panel">
-      <div class="card-title">قائمة المستخدمين</div>
-      <table class="table" id="usersTable">
-        <thead><tr><th>الاسم</th><th>البريد</th><th>الدور</th><th>تعديل</th></tr></thead>
-        <tbody></tbody>
-      </table>
-    </div>
-
-    <div class="panel" style="margin-top:16px;">
-      <div class="card-title">تعديل / إضافة مستخدم</div>
-      <div style="max-width:520px">
-        <input id="u_name" class="input" placeholder="الاسم">
-        <input id="u_email" class="input" placeholder="البريد">
-        <select id="u_role" class="input">
-          <option value="employee">employee</option>
-          <option value="sales">sales</option>
-          <option value="manager">manager</option>
-          <option value="hr">hr</option>
-          <option value="finance">finance</option>
-          <option value="admin">admin</option>
-        </select>
-        <button class="btn" id="saveUserBtn">حفظ المستخدم</button>
-      </div>
-    </div>
-
-  </main>
+<div class="sidebar">
+  <h3>النظام الإداري</h3>
+  <a href="index.html">الرئيسية</a>
+  <a href="roles.html" class="active">الصلاحيات</a>
+  <a href="users.html">المستخدمين</a>
+  <a href="dashboard.html">التقارير</a>
 </div>
-<script src="assets/js/app.js"></script>
+
+<div class="content">
+  <h1>إدارة الصلاحيات</h1>
+
+  <div class="panel">
+    <h2>المستخدمون و أدوارهم</h2>
+    <table>
+      <tr><th>البريد</th><th>الدور</th><th>إجراء</th></tr>
+      <tr><td>admin@test.com</td><td>Admin</td><td><button>تغيير</button></td></tr>
+      <tr><td>manager@test.com</td><td>Manager</td><td><button>تغيير</button></td></tr>
+      <tr><td>hr@test.com</td><td>HR</td><td><button>تغيير</button></td></tr>
+    </table>
+  </div>
+
+</div>
 </body>
 </html>
