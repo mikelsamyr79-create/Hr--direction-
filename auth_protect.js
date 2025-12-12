@@ -1,2 +1,1 @@
-
-console.log("حماية الصفحات سيتم تفعيلها بعد ربط Firebase.");
+console.log('حماية ستكون عبر Firebase');

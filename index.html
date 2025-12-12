@@ -1,22 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <title>لوحة التحكم</title>
 <link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/auth_protect.js"></script>
 </head>
 <body>
-
-<nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="reports.html">التقارير</a>
-    <a href="employees.html">الموظفين</a>
-    <a href="login.html" onclick="logout()">تسجيل الخروج</a>
-</nav>
-
-<h1 style="padding:20px;">مرحبا بك في النظام</h1>
-
-<script src="assets/js/auth_protect.js"></script>
+<header class="top-nav">لوحة التحكم</header>
+<div class="container">
+<div class="card"><a href="roles.html">إدارة الصلاحيات</a></div>
+<div class="card"><a href="dashboard.html">التقارير</a></div>
+</div>
 </body>
 </html>
